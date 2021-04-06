@@ -1,0 +1,594 @@
+/* General style  */
+.section-title
+{
+    position: relative;
+    margin: 0 auto;
+}
+.h2
+{
+    font-size: 70px;
+    color: #111;
+    opacity: .1;
+    font-weight: 900;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.h3
+{
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    top:50%;
+    left: 50%;
+    padding-bottom: 20px;
+    transform: translate(-50%,50%);
+
+}
+.h3::after
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border:1px solid #000;
+    width: 40px;
+    transition: width .4s ease;
+
+}
+.h3:hover::after
+{
+    width: 60px;
+}
+.section-title p
+{
+    margin-top: 50px;
+    font-size: 18px;
+    color: #999;
+}
+
+
+/* navbar  */
+.navbar
+{
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 5px 5px 15px 0 rgb(31 31 31 / 7%);
+}
+.navbar .navbar-nav .nav-link
+{
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    padding-left: 20px;
+    color: #333;
+    transition: color .2s ease;
+}
+.navbar .navbar-nav .nav-link:hover
+{
+    color: #f25454;
+}
+.navbar .navbar-nav .active
+{
+    color: #f25454 !important;
+}
+.navbar-dark .navbar-toggler
+{
+    border:0;
+
+}
+.navbar .nav-icon a
+{
+    color: #333;
+    padding-left: 15px;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+.navbar .nav-icon a:hover
+{
+    color: #f25454;
+} /* end navbar */
+
+/** home section **/
+.home .carousel .carousel-inner .slider
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .carousel .carousel-inner .slider h1
+{
+    font-size: 70px;
+    font-weight: 800;
+    color: #fff;
+}
+.home .carousel .carousel-inner .slide1
+{
+    background: url(../images/slideshow-1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.home .carousel .carousel-inner .slide2
+{
+    background: url(../images/slideshow-2.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.home .carousel .carousel-inner .slide3
+{
+    background: url(../images/slideshow-3.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.home .icon 
+{
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+.home .angel
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    transition: all .5s ease;
+    opacity: 1;
+    border-radius: 0 3px 0 0;
+    border-left: 0;
+    font-size: 25px;
+}
+.carousel-control-prev
+{
+    border-bottom: 0 !important;
+}
+.carousel-control-next
+{
+    border-radius: 0 0 3px 0 !important;
+}
+.home .angel::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    width: 0;
+    transition: width .3s ease;
+    z-index: -1;
+}
+.home .angel:hover::after
+{
+    width: 100%;
+}
+.home .angel:hover i
+{
+    color: #f25454;
+}
+.home .setting-icon
+{
+    position: fixed;
+    left: 0;
+    top: 30%;
+    background-color: #222;
+    padding: 8px 10px;
+    z-index: 99;
+    border-radius: 0 3px 3px 0;
+    transition: all .4s ease;
+}
+.home .setting-icon:hover
+{
+    background-color: #444;
+}
+.home .down
+{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    height: 40px;
+    width: 26px;
+    border-radius: 13px;
+    z-index: 99;
+    cursor: pointer;
+    transition: border .3s ease;
+}
+.home .down:hover
+{
+    border: 1px solid #f25454;
+}
+.home .down span 
+{
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 6px;
+    left: 0;
+    right: 0;
+    transition: all .5s ease;
+    animation: scroll 2s infinite ease;
+
+}
+.home .down span:hover
+{
+    background-color: #f25454;
+}
+@keyframes scroll 
+{
+    0%{
+        top: 6px;
+        opacity: 1;
+    }
+    10%{
+        top: 10px;
+        opacity: 1;
+    }
+    25%{
+        top: 15px;
+        opacity: .8;
+    }
+    50%{
+        top: 23px;
+    }
+    
+    75%{
+        top: 30px;
+    }
+    100%{
+        opacity: 0;
+    }
+}/* end home section */
+
+/* about section  */
+
+.about .pargraph p
+{
+    color: #666;
+    font-size: 14px;
+}
+.about .progress
+{
+    margin-bottom: 10px;
+    height: 4px;
+}
+.about .progress-bar
+{
+    background-color: #f25454;
+}
+.about .progress-aria p
+{
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.about .progress-aria p:nth-of-type(1)
+{
+    font-weight: 600;
+}
+/* team section  */
+.team
+{
+    margin-top: 100px;
+}
+.team .team-member:hover .team-social,
+.team .team-member:hover .team-details h5
+{
+    opacity: 1;
+    color: #f25454;
+}
+.team .team-member:hover img
+{
+    transform: scale(1.1);
+}
+.team .team-img
+{
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.team .team-img img
+{
+    border-radius: 3px;
+    width: 100%;
+    transition: all .5s ease;
+}
+.team .team-img .team-social
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(242, 84, 84, 0.85);
+    text-align: center;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.team .team-img .team-social-inner
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+.team .team-img .team-social-inner i
+{
+    cursor: pointer;
+    padding: 0 15px;
+}
+.team .team-details
+{
+    margin-top: 15px;
+}
+.team .team-details span
+{
+    color: #666;
+    font-size: 15px;
+}
+
+/* services section  */
+.services
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #fafafa;
+}
+.services .service-single
+{
+    margin-bottom: 30px;
+}
+.services .service-single:hover .service-text h3
+{
+    color: #f25454;
+}
+.services .service-single .icon i
+{
+    color: #f25454;
+    font-size: 32px;
+}
+.services .service-single .icon
+{
+    padding-top: 10px;
+}
+.services .service-single .service-text
+{
+    padding-left: 20px;
+}
+.services .service-single .service-text p
+{
+    color: #666;
+}
+.services .service-single .service-text h3
+{
+    color: #282828;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+    transition: color .4s ease;
+}
+/* review section  */
+.review
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.imgs .img
+{
+    width: 110px;
+    margin: 0 10px;
+    opacity: .6;
+}
+.imgs .img img
+{
+    width: 100%;
+    border-radius: 50%;
+}
+.imgs .active
+{
+    width: 130px;
+    opacity: 1;
+}
+.imgs .active p:nth-of-type(1)
+{
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0;
+
+}
+.imgs .active p:nth-of-type(2)
+{
+    color: #666;
+    padding: 0;
+}
+.img-text
+{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.img-text p
+{
+    font-size: 25px;
+    color: #666;
+}
+
+/* contact section  */
+.contact 
+{
+    background-color: #fafafa;
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+.contact-details article
+{
+    border-bottom: 1px solid #eee;
+}
+.contact-details .contact-icon
+{
+    margin-top: 30px;
+}
+.contact-details .contact-icon i
+{
+    color: #f25454;
+    font-size: 35px;
+}
+.contact-details .contact-content
+{
+    margin-left: 20px;
+}
+.contact-details .contact-content h3
+{
+    color: #282828;
+    font-size: 20px;
+    font-weight: 700;
+}
+.contact-details .contact-content p
+{
+    color: #666;
+}
+.contact-details form input
+{
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #eee;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    transition: all .4s ease;
+}
+.contact-details form input:focus
+{
+    border: 2px solid #f25454;
+    outline: none;
+}
+.contact-details form textarea:focus
+{
+    border: 2px solid #f25454;
+    outline: none;
+}
+.contact-details form textarea
+{
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #eee;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    height: 150px;
+    transition: all .4s ease;
+}
+.contact-details form button
+{
+    padding: 10px 15px;
+}
+/* footer section  */
+footer
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #222;
+    background-image: url(../images/dotted-map.png);
+    background-size: contain;
+    position: relative;
+}
+footer .to-top
+{
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(242, 84, 84, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fafafa;
+    font-size: 25px;
+    top: -25px;
+    font-weight: 900;
+    line-height: 45px;
+    transition: all .4s ease;
+
+}
+footer .to-top:hover
+{
+    background-color: #f25454;
+}
+footer .widget p
+{
+    color: #b0b0b0;
+    margin: 0 0 5px;
+    cursor: pointer;
+    transition: color .4s ease;
+}
+footer .widget p:hover
+{
+    color: #f25454;
+}
+footer .widget a
+{
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    border-radius: 3px;
+    padding: 5px 5px;
+    margin:5px 5px;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+footer .widget a:hover
+{
+    border: 1px solid #f25454;
+    color: #f25454;
+}
+.copy-right
+{
+    background-color: #1a1a1a;
+    padding: 30px 0;
+    color: #fff;
+}
+.copy-right .icon i
+{
+    padding: 0 10px;
+    transition: color .4s ease;
+    cursor: pointer;
+}
+.copy-right .icon i:hover
+{
+    color: #f25454;
+}
+.copy-right .copy span:nth-of-type(1)
+{
+    color: #b0b0b0;
+}
+}
+.copy-right .copy span:nth-of-type(2)
+{
+    font-weight: 600;
+    transition: color .3s ease;
+    cursor: pointer;
+}
+.copy-right .copy span:nth-of-type(2):hover
+{
+    color: #f25454;
+}
